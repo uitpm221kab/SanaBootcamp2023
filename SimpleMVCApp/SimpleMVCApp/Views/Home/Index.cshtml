@@ -1,0 +1,21 @@
+﻿@model SimpleMVCApp.Models.UserModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+        <div>
+        @Html.LabelFor(model => model.UserName)
+        @Html.TextBoxFor(model => model.UserName)
+        </div>
+        <button type="submit">Submit</button>
+}
+
+@if (ViewData["Message"] != null)
+{
+        <div>
+        @ViewData["Message"]
+        </div>
+}
